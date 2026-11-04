@@ -4,22 +4,26 @@ Mohammed's own things for the BI dashboards, kept out of the shared `CleanLifeCo
 repository:
 
 ```
-method/    my way of building dashboards: a Claude Code plugin with four skills (start, propose rules, approve, build)
-notes/     my notes per dashboard (where today's version lives in development's code, what is still open)
-history/   the build log, the Sunday checklist and the "how it was built" notes taken off the pages
-save.sh    saves this repository and sends it to GitHub
+method/     my way of working: a Claude Code plugin with my skills (start, propose rules, approve, build,
+            and the plain-words helpers: set up, save, get the latest, send for review, check, ask the data)
+tools/      the scripts those skills run from inside the BI-Dashboards folder (setup, branch, save, update,
+            review), and apply-settings.js, which adds my Claude Code settings to that folder
+settings/   my Claude Code settings for the BI-Dashboards folder
+notes/      my notes per dashboard (where today's version lives in development's code, what is still open)
+history/    the build log, the Sunday checklist and the "how it was built" notes taken off the pages
+guide-ar.md my guide to working in plain words
+save.sh     saves this repository and sends it to GitHub
 ```
 
-## Turn my way of working on (once per laptop)
+## On a new laptop
 
 1. Clone this repository next to the BI-Dashboards folder, so the two folders sit side by side.
-2. In VS Code, in the BI-Dashboards folder, type `/plugins` in the Claude Code panel.
-3. On **Marketplaces**, add this folder's full path. On **Plugins**, install **mohammed** with **Install
-   locally**.
-4. Start a new conversation. «ابدأ لوحة…», «اقترح القواعد», «اعتمد القواعد» and «ابنِ اللوحة» now work, for me
-   only.
+2. In VS Code, in the BI-Dashboards folder, type `/plugins` in the Claude Code panel. On **Marketplaces**,
+   add this folder's full path. On **Plugins**, install **mohammed** with **Install locally**.
+3. In the BI-Dashboards folder's terminal: `node ../bi-dashboards-personal/tools/apply-settings.js`
+4. Start a new conversation and say «جهّز جهازي».
 
 ## Saving
 
-Claude Code saves this repository itself when my skills change the notes or the log. By hand:
+My skills save this repository themselves when they change my notes or the log. By hand:
 `bash save.sh "what changed"`.

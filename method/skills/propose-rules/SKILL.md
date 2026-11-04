@@ -11,7 +11,7 @@ text leaves the name out (a path such as `docs//rules.md` means `docs/<that dash
 
 This is step 1 of 3: the rules, then the analyst's approval, then the build. In this step you write only
 under `docs/$dashboard/` and in the analyst's private notes: no report SQL in `reports/`, no page in
-`dashboard/`. Work on the dashboard's branch: run `bash scripts/branch.sh $dashboard` first.
+`dashboard/`. Work on the dashboard's branch: run `bash <private>/tools/branch.sh $dashboard` first.
 
 Your private repository is the folder three levels above this skill's folder (Claude Code shows the skill's
 base directory when it loads); below it is called `<private>`. The analyst's own notes are in
@@ -76,7 +76,7 @@ anything the code or the data can settle.
 ## 5. Reply, then stop
 
 In a few lines: how many rules; those that change today's numbers most, with the numbers; the
-low-confidence ones; and the questions for the department. Save the work (`bash scripts/save.sh "Proposed
+low-confidence ones; and the questions for the department. Save the work (`bash <private>/tools/save.sh "Proposed
 rules for $dashboard"`), and the private notes if you changed them (`bash <private>/save.sh "Notes for
 $dashboard"`). Then wait: the analyst approves in their own words or with
 `/mohammed:approve-rules $dashboard ...`, or tells you what to change.

@@ -6,11 +6,15 @@ arguments: [dashboard]
 
 # Record the analyst's decision on the $dashboard rules
 
+Your private repository is the folder three levels above this skill's folder (Claude Code shows the skill's
+base directory when it loads); below it is called `<private>`. Its `tools/` hold the scripts this skill runs
+from inside the BI-Dashboards folder.
+
 The analyst wrote: $ARGUMENTS
 
 If that is empty, the decision is in the analyst's own last message. Record only what the analyst decided
 in this conversation, in their words; if they decided nothing, ask, and never approve a rule on your own.
-Work on the dashboard's branch: run `bash scripts/branch.sh <dashboard>` first.
+Work on the dashboard's branch: run `bash <private>/tools/branch.sh <dashboard>` first.
 
 The first word is the dashboard. After it come the ids of the rules to approve (for example
 `$dashboard-01 $dashboard-04`) or `all` for every proposed rule, and possibly changes or rejections in plain
@@ -26,6 +30,6 @@ words.
    unless the analyst asked for it in this message. If an id does not exist, say so.
 5. If an approved rule holds for CleanOS in general, not just this dashboard, say so and offer to add it to
    the confirmed list in `AGENTS.md`. Add it only if the analyst says yes.
-6. Save (`bash scripts/save.sh "Rule decisions for <dashboard>"`), then reply with three short lists
+6. Save (`bash <private>/tools/save.sh "Rule decisions for <dashboard>"`), then reply with three short lists
    (approved, still proposed, rejected) and say whether every rule the requested cards need is approved, so
    the dashboard can be built, or which ones are missing.

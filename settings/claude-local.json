@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "claudeMdExcludes": [
+    "**/refs/**/CLAUDE.md",
+    "**/refs/**/CLAUDE.local.md",
+    "**/refs/**/AGENTS.md",
+    "**/refs/**/.claude/rules/**",
+    "**/knowledge/**/CLAUDE.md",
+    "**/knowledge/**/AGENTS.md"
+  ],
+  "permissions": {
+    "allow": [
+      "Bash(npm run check)",
+      "Bash(bash scripts/test.sh)",
+      "Bash(bash scripts/explore.sh *)",
+      "Bash(bash scripts/report.sh *)",
+      "Bash(bash scripts/checks.sh *)"
+    ],
+    "ask": [
+      "Edit(/knowledge/**)",
+      "Bash(git restore *)",
+      "Bash(git merge --abort)"
+    ],
+    "deny": [
+      "Read(.env)",
+      "Read(.env.*)",
+      "Read(!.env.example)",
+      "Edit(/refs/**)",
+      "Bash(bash scripts/start-replica.sh *)",
+      "Bash(bash scripts/start-local.sh *)",
+      "Bash(npm start *)",
+      "Bash(npm run start *)",
+      "Bash(npm run dev *)",
+      "Bash(npm run build *)",
+      "Bash(npx next *)",
+      "Bash(psql *)",
+      "Bash(git push *)",
+      "Bash(git reset --hard *)",
+      "Bash(git clean *)",
+      "Bash(git rebase *)",
+      "Bash(git branch -D *)"
+    ]
+  }
+}

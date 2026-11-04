@@ -10,7 +10,7 @@ If the title above shows no dashboard name, use the dashboard the analyst is tal
 text leaves the name out (a path such as `docs//rules.md` means `docs/<that dashboard>/rules.md`).
 
 This is step 3 of 3. Read `AGENTS.md` first: its rules hold for every file you write. Work on the
-dashboard's branch: run `bash scripts/branch.sh $dashboard` first.
+dashboard's branch: run `bash <private>/tools/branch.sh $dashboard` first.
 
 Your private repository is the folder three levels above this skill's folder (Claude Code shows the skill's
 base directory when it loads); below it is called `<private>`. It holds the analyst's own notes per
@@ -133,6 +133,6 @@ If the service does not answer, say so and leave these to the analyst.
 Short and in plain words: the cards built, in the order you chose and why; last month's corrected and
 today's numbers side by side; the checks and how many pass; the rules each card uses; anything not built
 and why; what to look at on http://localhost:3100/$dashboard; and which numbers to compare with the live
-app for the same period. Save the dashboard (`bash scripts/save.sh "Build the $dashboard dashboard"`), then
+app for the same period. Save the dashboard (`bash <private>/tools/save.sh "Build the $dashboard dashboard"`), then
 add a line to `<private>/history/build-log.md` and save it (`bash <private>/save.sh "Build log: $dashboard"`).
 When the analyst is happy with the page, "send it for review" opens the review request.

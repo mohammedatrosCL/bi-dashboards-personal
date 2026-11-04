@@ -13,7 +13,7 @@ the shared repository.
 
 1. Choose the dashboard's key: short, lower-case English with `-` (for example `b2b`, `inventory`). Ask the
    analyst if it isn't obvious. Check it isn't taken: no `docs/<key>/` and no `reports/sql/<key>/`.
-2. Run `bash scripts/update.sh`, then `bash scripts/branch.sh <key>`.
+2. Run `bash <private>/tools/update.sh`, then `bash <private>/tools/branch.sh <key>`.
 3. Create `docs/<key>/requirements.md` from `docs/templates/requirements.md`. The owner is the person you
    are working with (`git config user.name`) unless they name someone else; fill in the department and the
    session date if you know them.
@@ -26,6 +26,6 @@ the shared repository.
    "Session notes" in `docs/<key>/requirements.md` as written, with the department's answers in bold as
    given. List anything still open or unclear in `<private>/notes/<key>/reading-notes.md`, as
    `<private>/notes/pricing/reading-notes.md` does.
-6. Save the dashboard with `bash scripts/save.sh "Start the <key> dashboard"` and the notes with
+6. Save the dashboard with `bash <private>/tools/save.sh "Start the <key> dashboard"` and the notes with
    `bash <private>/save.sh "Notes for <key>"`. Tell the analyst it is started and that the next step is
    proposing the rules ("propose the rules for <key>").

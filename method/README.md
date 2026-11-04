@@ -23,4 +23,8 @@ Also part of this way:
   status.
 - Pages show the numbers only; how and when something was built stays in `history/` here.
 
+The plain-words helpers are mine too: «جهّز جهازي» (`set-up-laptop`), «احفظ عملي» (`save-work`), «حدّث»
+(`get-latest`), «أرسلها للمراجعة» (`send-for-review`), "are October's numbers right?" (`check-dashboard`) and
+"how many deals were lost last month?" (`ask-data`). They run the scripts in `../tools/`.
+
 Slash commands carry the plugin's name, for example `/mohammed:propose-rules b2b`. Plain words work too.

@@ -1,0 +1,14 @@
+{
+  "name": "mohammed-personal",
+  "description": "Mohammed's own way of building the BI dashboards",
+  "owner": {
+    "name": "Mohammed Atros"
+  },
+  "plugins": [
+    {
+      "name": "mohammed",
+      "source": "./method",
+      "description": "Proposed business rules with evidence, the owner's approval, then the build from approved rules only"
+    }
+  ]
+}
